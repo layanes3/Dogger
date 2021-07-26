@@ -1,0 +1,169 @@
+/*style_css*/
+
+/*Variables*/
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --grey_light: #f8f9fa;
+    --grey: #999999;
+    --grey_dark: #4a4a4b;
+    --green: #a2c0be;
+    --green_dark: #567876;
+    --Orange: #ff9900;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+}
+
+a.logo {
+    font-size: 2em;
+    color: var(--black);
+    text-decoration: none;
+}
+
+/*header*/
+header {
+    background-color: #f8f9fa;
+}
+
+/*barre de navigation*/
+header nav {
+    display: flex; /*alignement*/
+    align-items: center; 
+    justify-content: space-between;
+    height: 80px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+header nav ul a {
+    color: var(--grey);
+    text-decoration: none;
+}
+
+header span {
+    color: var(--Orange);
+}
+
+header .container ul {
+    text-decoration: none;
+    display: flex;
+}
+
+/*titre et slogan*/
+header section { /* mettre texte et image a coté*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header section img { /*is on a plusieurs images utiliser selecteur avancé : img:nth-child(2) { }*/
+    width: 35%;
+}
+
+header section h1 {
+    margin: 0; /*marge exterieur*/
+    font-size: 4em; /* taille de la police*/
+    font-weight: lighter; 
+}
+
+header section p {
+    margin: 0; /*moins d'espace entre titre et paragraphe*/
+    font-size: 1.3em; /*grossir taille police*/
+    font-weight: lighter;
+    color: var(--grey);
+    padding: top; 
+}
+
+/*section 1 "welcome*/
+main .welcome {
+    text-align: center;
+    width: 45%;
+    margin: auto;
+}
+
+main .welcome h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px; /*reduire espace entre h et p*/
+    margin-top: 60px; /* espace entre section et header*/
+}
+
+main .welcome p {
+    margin: 0;
+    font-weight: lighter;
+    color: var(--grey);
+    margin-bottom: 60px;
+}
+
+/*section "cards"*/
+main .card {
+    display: flex;
+    justify-content: space-between; /*alignement horizontal*/
+    gap: 150px; /* espace entre chaque element*/
+    margin: 100px 0;
+    align-items: center;
+    text-align: right;
+}
+
+main .card img {
+    width: 90%;
+    box-shadow: 10px 10px 0 var(--green); /*L - l - flou - couleur*/
+}
+
+main .card h3 {
+    font-size: 2em;
+    font-weight: normal;
+    margin: 0;
+}
+
+main .card p {
+    color: var(--grey);
+    margin-bottom: 30px;
+}
+
+/*section3 text-left */
+main .text-left {
+    text-align: left;
+}
+
+.btn {
+    color: var(--white);
+    text-decoration: none;
+    background-color: var(--green);
+    padding: 12px 32px; /*taille, 1er : haut et bas, 2eme : droite et gauche*/
+    border-radius: 100px; /* pour arrondir, pas de pourcentage car risque d'ovale*/
+    letter-spacing: 0.1em;
+    transition: background-color 500ms;
+}
+
+.btn:hover { /*attention pas d'espace.. fait reference a .btn au dessus*/
+    background-color: var(--black);
+    transition: background-color 500ms;
+}
+    
+/*footer*/
+footer {
+    background-color: var(--grey_dark);
+    color: white;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*ou : 
+    text-align: center;
+    padding : 50px 0;
+    font-size: 0.8em */
+}
